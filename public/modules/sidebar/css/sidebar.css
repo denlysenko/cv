@@ -1,0 +1,101 @@
+aside.col-md-4 {
+	padding: 0;
+}
+
+aside {
+	background: #39424a;
+	color: #fff;
+}
+
+nav {
+	padding: 20px 50px;
+	overflow: hidden;
+}
+
+nav li {
+	margin-bottom: 10px;
+}
+
+.lang-switcher {
+	float: right;
+}
+
+.lang-switcher li {
+	display: inline-block;
+}
+
+.lang-switcher a {
+	display: inline-block;
+	width: 25px;
+	height: 13px;
+}
+
+.ru {
+	background: url('../img/Flag_of_Russia_mini.png') no-repeat;
+}
+
+.en {
+	background: url('../img/Flag_of_the_United_Kingdom_mini.png') no-repeat;
+}
+
+aside ul {
+	list-style: none;
+}
+
+.profile {
+	margin-bottom: 60px;
+	padding: 65px 0;
+	background: #272c32;
+	text-align: center;
+}
+
+.profile .photo {
+	width: 250px;
+	margin: 0 auto 50px;
+	border-radius: 100%;
+	border: 2px solid #39424a; 
+	overflow: hidden;
+}
+
+.profile .photo img {
+	width: 250px;
+	height: 250px;
+}
+
+.profile > h3 > small {
+	display: block;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.about,
+.contacts,
+.skills {
+	margin-bottom: 60px;
+	padding: 0 50px;
+}
+
+aside h4 > .fa {
+	width: 30px;
+	line-height: 30px;
+	background: #272c32;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.contacts li {
+	margin-bottom: 10px;
+}
+
+.contacts  > ul .fa,
+nav > ul .fa {
+	width: 20px;
+	line-height: 20px;
+	margin-right: 5px;
+	border-radius: 50%;
+	background: #fff;
+	color: #39424a;
+	text-align: center;
+	vertical-align: middle;
+}

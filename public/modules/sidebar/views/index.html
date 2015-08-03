@@ -1,0 +1,49 @@
+<div data-ng-controller="SidebarController">
+  <nav>
+    <ul class="lang-switcher">
+      <li><a href="" class="ru" data-ng-click="setLang('ru')"></a></li>
+      <li><a href="" class="en" data-ng-click="setLang('en')"></a></li>
+    </ul>
+    <ul>
+      <li data-ng-show="lang === 'en'"><i class="fa fa-info"></i> <a href="/#!/">Main Info</a></li>
+      <li data-ng-show="lang === 'ru'"><i class="fa fa-info"></i> <a href="/#!/">Общая информация</a></li>
+      <li data-ng-show="lang === 'en'"><i class="fa fa-briefcase"></i> <a href="/#!/portfolio">Portfolio</a></li>
+      <li data-ng-show="lang === 'ru'"><i class="fa fa-briefcase"></i> <a href="/#!/portfolio">Портфолио</a></li>
+      <li data-ng-show="lang === 'en'"><i class="fa fa-male"></i> <a href="/#!/about">About Me</a></li>
+      <li data-ng-show="lang === 'ru'"><i class="fa fa-male"></i> <a href="/#!/about">Обо мне</a></li>
+    </ul> 
+  </nav>
+  <div class="profile">
+    <div class="photo">
+      <img data-ng-src="{{profile.photo}}" alt="photo" title="photo">
+    </div>
+    <h3> {{profile.name}} {{profile.lastName}}
+      <small>{{profile.position}}</small>
+    </h3>
+  </div>
+  <div class="about">
+    <h4 data-ng-show="lang === 'en'"><i class="fa fa-user"></i> Goal</h4>
+    <h4 data-ng-show="lang === 'ru'"><i class="fa fa-user"></i> Цель</h4>
+    <div ng-bind-html="profile.about"></div>
+  </div>
+  <div class="contacts">
+    <h4 data-ng-show="lang === 'en'"><i class="fa fa-envelope"></i> Contact me</h4>
+    <h4 data-ng-show="lang === 'ru'"><i class="fa fa-envelope"></i> Контакты</h4>
+    <ul>
+      <li><i class="fa fa-map-marker"></i> {{profile.location}}</li>
+      <li><i class="fa fa-globe"></i> <a href="">{{profile.email}}</a></li>
+      <li><i class="fa fa-mobile"></i> {{profile.phone}}</li>
+      <li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100008103041204" target="_blank">Facebook</a></li>
+      <li><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/hp/?dnr=qAZ3gQn3ShPA7zyTdVJZgjyEYhkaC2B9WmkF" target="_blank">LinkedIn</a></li>
+      <li><i class="fa fa-github"></i> <a href="https://github.com/denlysenko" target="_blank"> Github</a></li>
+    </ul>
+  </div>
+  <div class="skills">
+    <h4 data-ng-show="lang === 'en'"><i class="fa fa-code"></i> Skills</h4>
+    <h4 data-ng-show="lang === 'ru'"><i class="fa fa-code"></i> Навыки</h4>
+    {{profile.skills}}
+  </div>
+</div>
+
+
+

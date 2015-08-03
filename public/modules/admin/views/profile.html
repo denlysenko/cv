@@ -1,0 +1,49 @@
+<h3><i class="fa fa-user"></i> Profile</h3>
+<form data-ng-submit="save(this)" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="name">First Name</label>
+		<input id="name" type="text" class="form-control" name="name" data-ng-model="profile.name" placeholder="First Name">
+	</div>
+	<div class="form-group">
+		<label for="lastname">Last Name</label>
+		<input id="lastname" type="text" class="form-control" name="lastName" data-ng-model="profile.lastName" placeholder="Last Name">
+	</div>
+	<div class="form-group">
+		<label for="photo">Photo</label>
+		<input id="photo" type="file" class="form-control" name="photo" data-ng-model="photo" placeholder="Photo" data-ngf-select>
+	</div>
+	<div class="form-group">
+		<label for="position">Position</label>
+		<input id="position" type="text" class="form-control" name="position" data-ng-model="profile.position" placeholder="Position">
+	</div>
+	<div class="form-group">
+		<label for="about">Goal</label>
+		<textarea name="about" id="about" rows="10" class="form-control" data-ng-model="profile.about" placeholder="About"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="location">Location</label>
+		<input id="location" type="text" class="form-control" name="location" data-ng-model="profile.location" placeholder="Location">
+	</div>
+	<div class="form-group">
+		<label for="phone">Phone</label>
+		<input id="phone" type="text" class="form-control" name="phone" data-ng-model="profile.phone" placeholder="Phone">
+	</div>
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input id="email" type="email" class="form-control" name="email" data-ng-model="profile.email" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<label for="skills">Skills</label>
+		<textarea name="skills" id="skills" rows="10" class="form-control" data-ng-model="profile.skills" placeholder="Skills"></textarea>
+	</div>
+	<div class="text-success" data-ng-show="success">
+		<strong>Successfully {{success}}</strong>
+	</div>
+	<div class="text-danger" data-ng-show="error">
+		<strong>{{error}}</strong>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Save</button>
+		<button type="button" class="btn btn-danger" data-ng-click="remove(profile._id)">Delete</button>
+	</div>
+</form>

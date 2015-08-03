@@ -1,0 +1,28 @@
+<h3><i class="fa fa-briefcase"></i> Portfolio</h3>
+<form action="" data-ng-repeat="portfolio in portfolios track by $index | orderBy: -$index" data-ng-submit="save(this)" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="title">Title</label>
+		<input type="text" class="form-control" name="title" data-ng-model="portfolio.title" placeholder="Title">
+	</div>
+	<div class="form-group">
+		<label for="description">Description</label>
+		<textarea name="description" id="description" rows="10" class="form-control" data-ng-model="portfolio.description" placeholder="Description"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="screenshot">Screenshot</label>
+		<input type="file" class="form-control" data-ng-model="screenshot" name="screenshot" placeholder="Screenshot" data-ngf-select>
+	</div>
+	<div class="form-group">
+		<button type="button" class="btn btn-default" data-ng-click="addOneMore()">Add One More</button>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Save</button>
+		<button data-ng-click="remove(portfolio._id)" class="btn btn-danger" type="button">Delete</button>
+	</div>
+</form>
+<div class="text-success" data-ng-show="success">
+	<strong>Successfully {{success}}</strong>
+</div>
+<div class="text-danger" data-ng-show="error">
+	<strong>{{error}}</strong>
+</div>

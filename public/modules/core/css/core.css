@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul a {
+	text-decoration: none;
+}
+
+ul a:hover {
+	text-decoration: underline;
+}
+
+.pagination > li > a {
+	text-decoration: none !important;
+}
+
+a:focus,
+a:active {
+	color: inherit;
+	text-decoration: underline;
+}
+
+ul {
+	margin-bottom: 0;
+}
+
+.container {
+	margin: 5px auto;
+	padding: 0;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,.3);
+}
+
+.content {
+	padding-top: 90px;
+}
+
+.navbar-header {
+	margin-top: 15px;
+}
+
+main.col-md-8 {
+	padding: 15px 60px;
+	color: #272c32;
+}
+
+main h3 {
+	margin: 0 0 30px;
+	text-transform: uppercase;
+}
+
+main h4 {
+	margin: 0;
+}
+
+main h3 > .fa {
+	width: 30px;
+	line-height: 30px;
+	background: #272c32;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+}
+
+main .item {
+	margin: 0 0 30px 37px;
+}
+
+main .item small {
+	color: #9ba6ae;
+	margin-right: 20px;
+}
+
+main .item p {
+	margin-bottom: 20px;
+}
+
+main .item ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+main .item ul li {
+	margin: 0 0 10px 5px;
+}
+
+.language  li{
+	display: inline-block;
+}
+
+.language img {
+	width: 120px;
+	height: 80px;
+	box-shadow: 0 0 2px rgba(0,0,0,.3);
+	border-radius: 3px;
+}
+
+.example h4 {
+	margin-top: 20px;
+}
+
+.example img {
+	width: 100%;
+	height: auto;
+}
+
+.centered {
+	text-align: center;
+}

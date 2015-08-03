@@ -1,0 +1,49 @@
+<h3><i class="fa fa-graduation-cap"></i> Education</h3>
+<form data-ng-repeat="form in forms track by $index" ng-submit="save(this)">
+	<div class="form-group">
+		<label for="institution">Institution</label>
+		<input id="institution" type="text" class="form-control" placeholder="Institution" data-ng-model="form.institution" name="institution">
+	</div>
+	<div class="form-group">
+		<label for="specialty">Specialty</label>
+		<input id="specialty" type="text" class="form-control" placeholder="Specialty" data-ng-model="form.specialty" name="specialty">
+	</div>
+	<div class="form-group" data-ng-controller="DatePickerController">
+		<label>Period of Attending</label>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="form.from" name="from" is-open="opened" min-date="minDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="From">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+			</div>
+			<div class="col-md-6">
+				<p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="form.to" name="to" is-open="opened" min-date="minDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="To">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="comments">Comments</label>
+		<textarea name="comments" id="comments" rows="10" class="form-control" data-ng-model="form.comments" placeholder="Comments"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Save</button>
+		<button data-ng-click="remove(form._id)" class="btn btn-danger" type="button">Delete</button>
+	</div>
+</form>
+<div class="form-group">
+	<button type="button" class="btn btn-default" data-ng-click="addOneMore()">Add One More</button>
+</div>
+<div class="text-success" data-ng-show="success">
+	<strong>Successfully {{success}}</strong>
+</div>
+<div class="text-danger" data-ng-show="error">
+	<strong>{{error}}</strong>
+</div>

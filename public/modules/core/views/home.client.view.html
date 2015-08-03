@@ -1,0 +1,50 @@
+<section data-ng-controller="HomeController">
+	<h3 data-ng-show="lang === 'en'"><i class="fa fa-briefcase"></i> Work experience</h3>
+	<h3 data-ng-show="lang === 'ru'"><i class="fa fa-briefcase"></i> Опыт работы</h3>
+	<div class="item" data-ng-repeat="work in works | orderBy:$index">
+		<h4>{{work.position}}</h4>
+		<p><small><i class="fa fa-building-o"></i> {{work.company}}</small><small><i class="fa fa-calendar"></i> {{work.from | date:'mediumDate'}} - {{work.to | date:'mediumDate'}}</small></p>
+		<div data-ng-bind-html="work.duties"></div>
+	</div>
+	<h3 data-ng-show="lang === 'en'"><i class="fa fa-graduation-cap"></i> Education</h3>	
+	<h3 data-ng-show="lang === 'ru'"><i class="fa fa-graduation-cap"></i> Образование</h3>	
+	<div class="item" data-ng-repeat="education in educations | orderBy:$index">
+		<h4>{{education.specialty}}</h4>
+		<p><small><i class="fa fa-university"></i> {{education.institution}}</small><small><i class="fa fa-calendar"></i> {{education.from | date:'mediumDate'}} - {{education.to | date:'mediumDate'}}</small></p>
+	</div>
+	<h3 data-ng-show="lang === 'en'"><i class="fa fa-language"></i> Languages</h3>
+	<h3 data-ng-show="lang === 'ru'"><i class="fa fa-language"></i> Иностранные языки</h3>
+	<div class="item">
+		<ul class="language">
+			<li>
+				<img src="/modules/core/img/Flag_of_the_United_Kingdom.svg.png" alt="Flag of Great Britain">
+				<div>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+			</li>
+			<li>
+				<img src="/modules/core/img/Flag_of_Ukraine.svg.png" alt="Flag of Ukraine">
+				<div>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+			</li>
+			<li>
+				<img src="/modules/core/img/Flag_of_Russia.svg.png" alt="Flag of Russian Federation">
+				<div>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
